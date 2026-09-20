@@ -2,19 +2,39 @@
 
 # Omer Hayat
 
-### CS @ NYU Abu Dhabi · ML Systems · Robotics · Software Engineering
+### CS @ NYU Abu Dhabi · ML Systems · Robotics · Software Engineering · SQL
 
 *I like building systems that know when they're uncertain, software that leaves evidence behind, and occasionally robots that need to understand English.*
 
 <br>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square\&logo=cplusplus\&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square\&logo=pytorch\&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square\&logo=amazonwebservices\&logoColor=white)
+<a href="https://omerhayat-portfolio.vercel.app/">
+  <img src="https://img.shields.io/badge/Personal%20Website-000000?style=for-the-badge&logo=vercel&logoColor=white">
+</a>
+<a href="https://www.linkedin.com/in/omer-hayat-974678204/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+</a>
+<a href="https://omerhayat.hashnode.dev/">
+  <img src="https://img.shields.io/badge/The%20Epoch-2962FF?style=for-the-badge&logo=hashnode&logoColor=white">
+</a>
 
 </div>
+
+---
+
+```text
+$ whoami
+
+Omer Hayat
+CS student, ML systems enthusiast, occasional robot whisperer.
+
+$ currently
+
+making models say "I don't know"
+teaching a quadruped to understand language
+turning side-project ideas into suspiciously large repositories
+trying not to introduce data leakage
+```
 
 ---
 
@@ -22,7 +42,7 @@
 
 I'm a Computer Science student at **NYU Abu Dhabi** interested in the point where machine learning stops being a model in a notebook and becomes an actual system.
 
-Most of my work ends up somewhere around **ML engineering, full-stack systems, cloud infrastructure, and robotics**.
+Most of my work ends up somewhere around **ML engineering, full-stack systems, cloud infrastructure, robotics, and data-intensive software**.
 
 I'm especially interested in:
 
@@ -30,9 +50,10 @@ I'm especially interested in:
 * evaluation that actually reflects real-world behaviour
 * human-in-the-loop systems
 * software reliability and failure modes
+* data, SQL, and systems that have to maintain state correctly
 * building the infrastructure around models, not just the models themselves
 
-Right now, I'm working on language-guided robotics research with a **Unitree Go2**, building ML/software projects, and writing about things I learn along the way.
+Right now, I'm working on language-guided robotics research with a **Unitree Go2**, building ML and software projects, and writing about things I learn along the way.
 
 ---
 
@@ -47,8 +68,11 @@ Exploring confidence, abstention, retrieval, evaluation, and human-in-the-loop w
 🏗️ **Software systems**
 Building APIs, async pipelines, data systems, testing infrastructure, and deployment workflows.
 
+📊 **Data + SQL**
+Thinking about how data is stored, queried, validated, moved, and eventually turned into useful decisions.
+
 ✍️ **Technical writing**
-Writing about ML and systems concepts from first principles.
+Writing about ML and systems concepts from first principles through **[The Epoch](https://omerhayat.hashnode.dev/)**.
 
 ---
 
@@ -87,7 +111,7 @@ PitchMirror processes recorded pitches through an asynchronous cloud pipeline an
 
 `TypeScript` `Next.js` `AWS` `Step Functions` `S3` `DynamoDB`
 
-**Interesting bit:** the model is only one piece of the system — orchestration, storage, state, failure handling, and report generation matter just as much.
+**Interesting bit:** the model is only one piece of the system. Orchestration, storage, state, failure handling, and report generation matter just as much.
 
 ---
 
@@ -113,6 +137,8 @@ MatchLens experiments with football outcome prediction using chronological evalu
 
 **Interesting bit:** correctness of the experiment matters more than getting an impressive-looking accuracy number.
 
+Also, draws are annoying.
+
 ---
 
 ## 🔥 [Kaboom](https://github.com/OmerNYU/Kaboom_Diffusion)
@@ -123,7 +149,7 @@ Kaboom uses signed distance fields, sphere tracing, finite-difference normals, p
 
 `C++` `SDFs` `Ray Marching` `OpenMP`
 
-**Interesting bit:** no game engine and no GPU API — just math, pixels, and C++.
+**Interesting bit:** no game engine and no GPU API. Just math, pixels, and C++.
 
 ---
 
@@ -135,6 +161,10 @@ start simple
 make it measurable
     ↓
 find where it fails
+    ↓
+stare at logs
+    ↓
+question previous life choices
     ↓
 design for those failures
     ↓
@@ -151,6 +181,8 @@ Sometimes the correct output from an ML system really is:
 
 > *"I don't know."*
 
+I think software should be allowed to admit that more often.
+
 ### Baselines are underrated
 
 I'd rather understand why logistic regression works than hide a bad experiment behind a larger model.
@@ -161,7 +193,7 @@ Retries, abstention, validation, state transitions, health checks, and human rev
 
 ### The system around the model matters
 
-APIs, databases, queues, containers, tests, observability, and deployment usually determine whether ML actually becomes a product.
+APIs, databases, queues, containers, tests, observability, deployment, and SQL usually determine whether ML actually becomes a product.
 
 ---
 
@@ -206,11 +238,11 @@ APIs, databases, queues, containers, tests, observability, and deployment usuall
 
 ---
 
-# ✍️ Writing
+# ✍️ The Epoch
 
-I write about machine learning and software systems — especially ideas that become more interesting once you try to make them work outside a classroom.
+I write about machine learning and software systems, especially ideas that become more interesting once you actually try to make them work.
 
-### Backpropagation from First Principles
+### [Backpropagation from First Principles](https://omerhayat.hashnode.dev/backpropagation-from-first-principles)
 
 An attempt to understand neural-network training without treating automatic differentiation as magic.
 
@@ -218,20 +250,26 @@ An attempt to understand neural-network training without treating automatic diff
 
 Confidence, calibration, abstention, human review, and why forcing a model to always answer can be the wrong product decision.
 
+**→ [Read The Epoch](https://omerhayat.hashnode.dev/)**
+
 ---
 
-# A few things I care about
+# Outside the terminal
 
 ```python
-interests = [
-    "ML systems",
-    "robotics",
-    "software engineering",
-    "cloud infrastructure",
-    "evaluation",
-    "football",
-    "building things that actually work",
-]
+omer = {
+    "usually_thinking_about": [
+        "ML systems",
+        "robotics",
+        "software architecture",
+        "cloud infrastructure",
+        "why this test passed locally",
+    ],
+    "probably_watching": "football",
+    "weakness": "turning small project ideas into full systems",
+    "preferred_model_output": "calibrated",
+    "preferred_git_status": "clean",
+}
 ```
 
 ---
@@ -242,6 +280,9 @@ interests = [
 
 <br>
 
-<a href="https://github.com/OmerNYU">GitHub</a>
+<a href="https://omerhayat-portfolio.vercel.app/">Website</a>
+  ·   <a href="https://www.linkedin.com/in/omer-hayat-974678204/">LinkedIn</a>
+  ·   <a href="https://omerhayat.hashnode.dev/">The Epoch</a>
+  ·   <a href="https://github.com/OmerNYU">GitHub</a>
 
 </div>
