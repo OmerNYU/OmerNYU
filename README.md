@@ -29,13 +29,6 @@
     alt="Omer's Git Bonsai"
   />
 </p>
-<p align="center">
-  <img
-    src="https://github-readme-insight-terminal-asci.vercel.app/svg/neofetch?user=OmerNYU&theme=ubuntu&color=1&scale=0.72"
-    width="780"
-    alt="OmerNYU GitHub neofetch"
-  />
-</p>
 
 ---
 
