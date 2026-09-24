@@ -1,0 +1,42 @@
+name: Generate Contribution Gravity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  gravity:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v6
+
+      - name: Generate gravity SVG
+        uses: flycran/github-gravity@v1
+        with:
+          username: OmerNYU
+          text: OMER
+          output-path: deploy/gravity.svg
+          font-size: "88"
+          sample-rate: "4"
+          shape: square
+          text-top: "52"
+          background-color: transparent
+          text-color: "#7C3AED"
+
+      - name: Publish generated SVG
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
+          publish_branch: output
+          keep_files: false
+          force_orphan: true
