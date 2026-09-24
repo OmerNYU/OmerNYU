@@ -22,13 +22,6 @@
 
 <br>
 
-<p align="center">
-  <img
-    src="https://raw.githubusercontent.com/OmerNYU/OmerNYU/output/gravity.svg"
-    width="100%"
-    alt="Omer's GitHub contribution gravity animation"
-  />
-</p>
 
 <p align="center">
   <img
