@@ -22,5 +22,53 @@ jobs:
           user: OmerNYU
           output-dir: output
           season: auto
-          commit: true
-          commit-message: "chore: tend the bonsai 🌳"
+          commit: false
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Crop bonsai animations
+        run: |
+          GEOMETRY=$(convert output/bonsai.png -trim -format "%@" info:)
+
+          echo "Detected tree bounds: $GEOMETRY"
+
+          convert output/bonsai-growth.gif \
+            -coalesce \
+            -crop "$GEOMETRY" \
+            +repage \
+            -bordercolor white \
+            -border 18 \
+            -layers Optimize \
+            output/bonsai-growth-cropped.gif
+
+          convert output/bonsai.gif \
+            -coalesce \
+            -crop "$GEOMETRY" \
+            +repage \
+            -bordercolor white \
+            -border 18 \
+            -layers Optimize \
+            output/bonsai-cropped.gif
+
+          convert output/bonsai.png \
+            -trim \
+            -bordercolor white \
+            -border 18 \
+            output/bonsai-cropped.png
+
+      - name: Commit bonsai
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add output/
+
+          if git diff --cached --quiet; then
+            echo "No bonsai changes"
+          else
+            git commit -m "chore: tend the bonsai 🌳"
+            git push
+          fi
