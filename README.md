@@ -24,12 +24,11 @@
 
 <p align="center">
   <img
-    src="./output/bonsai-growth.gif"
+    src="./output/bonsai-growth-cropped.gif"
     width="420"
-    alt="Omer's Git Bonsai grown from his GitHub history"
+    alt="Omer's Git Bonsai"
   />
 </p>
-
 <p align="center">
   <img
     src="https://github-readme-insight-terminal-asci.vercel.app/svg/neofetch?user=OmerNYU&theme=ubuntu&color=1&scale=0.72"
