@@ -4,9 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
-  push:
-    branches:
-      - main
 
 permissions:
   contents: write
@@ -25,9 +22,9 @@ jobs:
           username: OmerNYU
           text: OMER
           output-path: deploy/gravity.svg
-          font-size: "88"
-          sample-rate: "4"
-          shape: square
+          font-size: "80"
+          sample-rate: "12"
+          shape: circle
           text-top: "52"
           background-color: transparent
           text-color: "#7C3AED"
