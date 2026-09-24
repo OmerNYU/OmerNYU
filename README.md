@@ -22,6 +22,13 @@
 
 <br>
 
+<p align="center">
+  <img
+    src="./output/bonsai-growth.gif"
+    width="420"
+    alt="Omer's Git Bonsai grown from his GitHub history"
+  />
+</p>
 
 <p align="center">
   <img
