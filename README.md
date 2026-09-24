@@ -2,287 +2,181 @@
 
 # Omer Hayat
 
-### CS @ NYU Abu Dhabi · ML Systems · Robotics · Software Engineering · SQL
+### CS @ NYU Abu Dhabi · ML Systems · Robotics · AWS · Software Engineering · SQL
 
-*I like building systems that know when they're uncertain, software that leaves evidence behind, and occasionally robots that need to understand English.*
+*building software somewhere between models, systems, and machines.*
 
 <br>
 
-<a href="https://omerhayat-portfolio.vercel.app/">
-  <img src="https://img.shields.io/badge/Personal%20Website-000000?style=for-the-badge&logo=vercel&logoColor=white">
+<a href="YOUR_WEBSITE">
+  <img src="https://img.shields.io/badge/website-111111?style=for-the-badge&logo=vercel&logoColor=white">
 </a>
-<a href="https://www.linkedin.com/in/omer-hayat-974678204/">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+<a href="YOUR_LINKEDIN">
+  <img src="https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
 </a>
-<a href="https://omerhayat.hashnode.dev/">
-  <img src="https://img.shields.io/badge/The%20Epoch-2962FF?style=for-the-badge&logo=hashnode&logoColor=white">
+<a href="YOUR_NEWSLETTER">
+  <img src="https://img.shields.io/badge/The_Epoch-2962FF?style=for-the-badge&logo=hashnode&logoColor=white">
 </a>
 
 </div>
 
----
+<br>
+
+<img src="./assets/system-map.svg" width="100%" alt="Omer Hayat system map showing ML, robotics and cloud projects">
+
+<br>
 
 ```text
-$ whoami
+omer@github:~$ whoami
 
-Omer Hayat
-CS student, ML systems enthusiast, occasional robot whisperer.
+CS student @ NYU Abu Dhabi
+ML systems + software + robots
 
-$ currently
-
-making models say "I don't know"
-teaching a quadruped to understand language
-turning side-project ideas into suspiciously large repositories
-trying not to introduce data leakage
+currently obsessed with:
+> models that can admit uncertainty
+> systems that survive outside notebooks
+> making four-file ideas become forty-file repositories
 ```
 
----
+## About
 
-## 👋 A little about me
+I build at the intersection of **machine learning and software systems**.
 
-I'm a Computer Science student at **NYU Abu Dhabi** interested in the point where machine learning stops being a model in a notebook and becomes an actual system.
+That usually means I start with a model or an idea and end up thinking about APIs, databases, evaluation, cloud infrastructure, failure handling, deployment, and whatever else is required to make the thing actually work.
 
-Most of my work ends up somewhere around **ML engineering, full-stack systems, cloud infrastructure, robotics, and data-intensive software**.
+Sometimes the software controls a robot.
 
-I'm especially interested in:
+Sometimes it decides that it **doesn't know**.
 
-* uncertainty and confidence in ML systems
-* evaluation that actually reflects real-world behaviour
-* human-in-the-loop systems
-* software reliability and failure modes
-* data, SQL, and systems that have to maintain state correctly
-* building the infrastructure around models, not just the models themselves
-
-Right now, I'm working on language-guided robotics research with a **Unitree Go2**, building ML and software projects, and writing about things I learn along the way.
+Both are more interesting that way.
 
 ---
 
-## ⚡ Currently
+# Selected builds
 
-🤖 **Robotics + VLA research**
-Working on language-guided navigation and learned policies for a Unitree Go2 at NYUAD's iCAS Lab.
+<table>
+<tr>
+<td width="50%" valign="top">
 
-🧠 **ML systems**
-Exploring confidence, abstention, retrieval, evaluation, and human-in-the-loop workflows.
+## 🧠 RepoTriage
 
-🏗️ **Software systems**
-Building APIs, async pipelines, data systems, testing infrastructure, and deployment workflows.
+**ML issue intelligence that knows when not to answer.**
 
-📊 **Data + SQL**
-Thinking about how data is stored, queried, validated, moved, and eventually turned into useful decisions.
+Predicts labels for GitHub issues, retrieves similar historical issues, estimates confidence, and routes uncertain predictions toward human review.
 
-✍️ **Technical writing**
-Writing about ML and systems concepts from first principles through **[The Epoch](https://omerhayat.hashnode.dev/)**.
+`ML` `FastAPI` `React` `PostgreSQL`
 
----
+**R@10:** 0.942 on the held-out retrieval set
 
-# Things I've built
+→ [Repository](https://github.com/OmerNYU/repotriage)
 
-## 🧠 [RepoTriage](https://github.com/OmerNYU/repotriage)
+</td>
 
-**Issue intelligence for open-source maintainers.**
+<td width="50%" valign="top">
 
-RepoTriage predicts GitHub issue labels, retrieves similar historical issues, and deliberately **abstains when confidence is too low** instead of pretending every prediction is trustworthy.
+## ☁️ PitchMirror
 
-`Python` `scikit-learn` `FastAPI` `React` `PostgreSQL` `Docker`
+**An AWS-native ML system for pitch coaching.**
 
-**Interesting bit:** prediction, confidence-aware abstention, retrieval, and maintainer feedback all live inside one review loop.
+Video enters through S3, asynchronous analysis runs through Step Functions and ECS, and the resulting signals and model outputs are assembled into structured coaching feedback.
 
----
+`AWS` `ML` `Next.js` `S3` `ECS` `Step Functions`
 
-## 🧪 [FailSpec](https://github.com/OmerNYU/FailSpec)
+The interesting problem wasn't just inference. It was everything around it.
 
-**Turns bug reports into reproducible regression evidence.**
+→ [Repository](https://github.com/OmerNYU/PitchMirror)
 
-FailSpec inspects a trusted local React or Next.js repository, forms a reproduction hypothesis, generates a constrained Playwright test, executes it, and returns an evidence-backed verdict.
+</td>
+</tr>
 
-`TypeScript` `Playwright` `Codex` `React`
+<tr>
+<td width="50%" valign="top">
 
-**Interesting bit:** the output isn't *"AI thinks this is a bug."*
-It's executable evidence.
+## 🧪 FailSpec
 
----
+**Bug report → executable evidence.**
 
-## 🎙️ [PitchMirror](https://github.com/OmerNYU/PitchMirror)
+Inspects a codebase, forms a reproduction hypothesis, generates a constrained Playwright regression test, executes it, and returns evidence rather than an AI guess.
 
-**An AI-assisted pitch coaching system.**
+`TypeScript` `Playwright` `Codex`
 
-PitchMirror processes recorded pitches through an asynchronous cloud pipeline and turns media, transcript, and model outputs into structured coaching reports.
+→ [Repository](https://github.com/OmerNYU/FailSpec)
 
-`TypeScript` `Next.js` `AWS` `Step Functions` `S3` `DynamoDB`
+</td>
 
-**Interesting bit:** the model is only one piece of the system. Orchestration, storage, state, failure handling, and report generation matter just as much.
+<td width="50%" valign="top">
 
----
+## ⚽ MatchLens
 
-## 🔎 [Internship Monitor](https://github.com/OmerNYU/Internship-Monitor)
+**Football prediction where time actually matters.**
 
-**An internship discovery and monitoring engine.**
-
-It collects structured listings, evaluates relevance and likely eligibility, tracks listing state, groups opportunities, and safely queues explainable alerts.
-
-`Python` `SQLite` `GitHub Actions` `asyncio`
-
-**Interesting bit:** it's built around explicit source health, deterministic decisions, durable state, retries, and safe failure modes.
-
----
-
-## ⚽ [MatchLens](https://github.com/OmerNYU/Match-Lens)
-
-**Premier League prediction without pretending time doesn't exist.**
-
-MatchLens experiments with football outcome prediction using chronological evaluation, pre-match rolling features, leakage guards, baselines, and walk-forward analysis.
+Premier League modelling with chronological evaluation, leakage guards, rolling pre-match features, walk-forward backtesting, and an unreasonable amount of effort spent making draws behave.
 
 `Python` `scikit-learn` `pandas`
 
-**Interesting bit:** correctness of the experiment matters more than getting an impressive-looking accuracy number.
+→ [Repository](https://github.com/OmerNYU/Match-Lens)
 
-Also, draws are annoying.
-
----
-
-## 🔥 [Kaboom](https://github.com/OmerNYU/Kaboom_Diffusion)
-
-**A tiny C++ ray-marched fireball renderer.**
-
-Kaboom uses signed distance fields, sphere tracing, finite-difference normals, procedural noise, and a hand-built rendering loop to generate an animated fireball.
-
-`C++` `SDFs` `Ray Marching` `OpenMP`
-
-**Interesting bit:** no game engine and no GPU API. Just math, pixels, and C++.
+</td>
+</tr>
+</table>
 
 ---
 
-# How I like to build
+## Other experiments
 
-```text
-start simple
-    ↓
-make it measurable
-    ↓
-find where it fails
-    ↓
-stare at logs
-    ↓
-question previous life choices
-    ↓
-design for those failures
-    ↓
-then add complexity
-```
+**🔥 [Kaboom](https://github.com/OmerNYU/Kaboom_Diffusion)**
+A dependency-light C++ fireball renderer built with signed distance fields, ray marching, procedural noise, and questionable numbers of pixels.
 
-### Evaluation > vibes
-
-If a model looks good in a demo but the evaluation is broken, the demo doesn't mean much.
-
-### Uncertainty is useful information
-
-Sometimes the correct output from an ML system really is:
-
-> *"I don't know."*
-
-I think software should be allowed to admit that more often.
-
-### Baselines are underrated
-
-I'd rather understand why logistic regression works than hide a bad experiment behind a larger model.
-
-### Failure modes belong in the architecture
-
-Retries, abstention, validation, state transitions, health checks, and human review aren't afterthoughts.
-
-### The system around the model matters
-
-APIs, databases, queues, containers, tests, observability, deployment, and SQL usually determine whether ML actually becomes a product.
+**🔎 [Internship Monitor](https://github.com/OmerNYU/Internship-Monitor)**
+A stateful internship discovery engine with structured-source monitoring, deterministic eligibility analysis, persistence, retries, and explainable alerts.
 
 ---
 
 # Toolbox
 
-### Languages
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat-square\&logo=cplusplus\&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square\&logo=postgresql\&logoColor=white)
+<img src="https://skillicons.dev/icons?i=py,cpp,ts,js,r,postgres,pytorch,tensorflow,sklearn&theme=dark" />
 
-### ML / Data
+<br>
 
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square\&logo=pytorch\&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square\&logo=tensorflow\&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square\&logo=scikitlearn\&logoColor=white)
-![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square\&logo=pandas\&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square\&logo=numpy\&logoColor=white)
+<img src="https://skillicons.dev/icons?i=aws,docker,linux,fastapi,nextjs,react,nodejs,git,githubactions,ros&theme=dark" />
 
-### Full-Stack / Backend
+</div>
 
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square\&logo=fastapi\&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square\&logo=nextdotjs\&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square\&logo=react\&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square\&logo=nodedotjs\&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square\&logo=postgresql\&logoColor=white)
+<br>
 
-### Systems / Cloud
-
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square\&logo=amazonwebservices\&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square\&logo=docker\&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square\&logo=linux\&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square\&logo=git\&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square\&logo=githubactions\&logoColor=white)
-
-### Robotics / Compute
-
-![ROS2](https://img.shields.io/badge/ROS2-22314E?style=flat-square\&logo=ros\&logoColor=white)
-![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square\&logo=nvidia\&logoColor=white)
-
----
-
-# ✍️ The Epoch
-
-I write about machine learning and software systems, especially ideas that become more interesting once you actually try to make them work.
-
-### [Backpropagation from First Principles](https://omerhayat.hashnode.dev/backpropagation-from-first-principles)
-
-An attempt to understand neural-network training without treating automatic differentiation as magic.
-
-### Why Machine Learning Models Should Be Allowed to Say "I Don't Know"
-
-Confidence, calibration, abstention, human review, and why forcing a model to always answer can be the wrong product decision.
-
-**→ [Read The Epoch](https://omerhayat.hashnode.dev/)**
-
----
-
-# Outside the terminal
-
-```python
-omer = {
-    "usually_thinking_about": [
-        "ML systems",
-        "robotics",
-        "software architecture",
-        "cloud infrastructure",
-        "why this test passed locally",
-    ],
-    "probably_watching": "football",
-    "weakness": "turning small project ideas into full systems",
-    "preferred_model_output": "calibrated",
-    "preferred_git_status": "clean",
-}
+```sql
+SELECT *
+FROM interests
+WHERE topic IN (
+    'ml systems',
+    'robotics',
+    'cloud',
+    'software engineering',
+    'data'
+)
+ORDER BY curiosity DESC;
 ```
+
+---
+
+# The Epoch
+
+I occasionally turn things I've learned the difficult way into things other people can read the easy way.
+
+**Backpropagation from First Principles**
+Neural-network training without treating autodiff as magic.
+
+**Why Machine Learning Models Should Be Allowed to Say "I Don't Know"**
+Confidence, calibration, abstention, selective prediction, and human review.
+
+→ **[Read The Epoch](YOUR_NEWSLETTER)**
 
 ---
 
 <div align="center">
 
-### Still figuring things out. Building while I do.
-
-<br>
-
-<a href="https://omerhayat-portfolio.vercel.app/">Website</a>
-  ·   <a href="https://www.linkedin.com/in/omer-hayat-974678204/">LinkedIn</a>
-  ·   <a href="https://omerhayat.hashnode.dev/">The Epoch</a>
-  ·   <a href="https://github.com/OmerNYU">GitHub</a>
+<sub>most repositories begin with "this should be pretty quick"</sub>
 
 </div>
