@@ -20,6 +20,23 @@ building somewhere between models, systems, and machines.
 
 </div>
 
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/OmerNYU/OmerNYU/output/gravity.svg"
+    width="100%"
+    alt="Omer's GitHub contribution gravity animation"
+  />
+</p>
+
+<p align="center">
+  <img
+    src="https://github-readme-insight-terminal-asci.vercel.app/svg/neofetch?user=OmerNYU&theme=mac&color=1&scale=0.72"
+    width="780"
+    alt="OmerNYU GitHub neofetch"
+  />
+</p>
+
+
 <br>
 
 <img src="./assets/system-map.svg" width="100%" alt="Omer Hayat system map showing ML, robotics, software, and AWS projects">
