@@ -2,7 +2,7 @@
 
 # Omer Hayat
 
-### CS @ NYU Abu Dhabi · ML Systems · Robotics · AWS · Software Engineering · SQL
+### CS @ NYU · ML Systems · Robotics · AWS · Software Engineering · SQL
 
 *building somewhere between models, systems, and machines.*
 
